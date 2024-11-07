@@ -1,0 +1,49 @@
+{
+  "name": "l",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc",
+    "ci": "npm run build && npm run check-format && npm run check-exports && npm run test",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "test": "vitest run",
+    "dev": "vitest",
+    "local-release": "changeset version && changeset publish",
+    "prepublishOnly": "npm run ci"
+  },
+  "main": "dist/index.js",
+  "description": "A demo npm package by Ali Azlan",
+  "keywords": [
+    "demo",
+    "typescript",
+    "ali azlan"
+  ],
+  "homepage": "https://github.com/aliazlanpro/aliazlan",
+  "bugs": {
+    "url": "https://github.com/aliazlanpro/aliazlan/issues"
+  },
+  "author": "Ali Azlan <aliazlanofficial@gmail.com> (https://aliazlan.me)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliazlanpro/aliazlan.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.15.4",
+    "@changesets/cli": "^2.27.7",
+    "@types/jaro-winkler": "^0.2.3",
+    "@types/lodash": "^4.17.13",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "jaro-winkler": "^0.2.8",
+    "lodash": "^4.17.21"
+  }
+}
