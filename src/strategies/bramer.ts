@@ -2,6 +2,7 @@ import type { Strategy } from '../types.js';
 
 /**
  * Bramer et. al. deduplication sweep strategy
+ *
  * Link: https://doi.org/10.3163/1536-5050.104.3.014
  */
 export const bramer: Strategy = {
